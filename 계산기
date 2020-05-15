@@ -1,0 +1,63 @@
+# calculator.python
+과제
+
+def add(a,c):
+    return a + c
+
+def substract(a,c):
+    return a - c
+
+def multiply(a,c):
+    return a * c
+
+def divide(a,c):
+    return a / c
+
+def rest(a,c):
+    return a % c
+    
+def mulit_calculation(a, c):
+    return add(a,c), substract(a,c), multiply(a,c), divide(a,c), rest(a,c)
+
+def calculation(a,b,c):
+    intValue = 0
+    calculationInd = True
+    
+    if b ==  "+":
+        intValue = add(a,c)
+    elif b == "-":
+        intValue = substract(a,c)
+    elif b == "*":
+        intValue = multiply(a,c)
+    elif b == "/":
+        intValue = divide(a, c)
+    else :
+        calculationInd = False
+    return intValue, calculationInd
+
+def inputData():
+    a = int(input("숫자를 입하세요. > "))
+    b = input("연산자를 입력 하세요 > ( +, -, *, /) >> ")
+    c = int(input("숫자를 입력하세요. > "))
+    return a,b,c
+
+def start():
+    while True:
+        a,b,c = inputData()
+        intValue, calculationInd = calculation(a,b,c)
+        if calculationInd:
+            print ("입력값  %d, %d 의 사칙연산 값음 ==>" %(a,c))
+            print ("사용자가 입력한 수식은 ::  %d %s %d = %d" % (a, b, c, intValue))
+            print ("\"+\" = %d, \"-\" = %d, \"*\" = %d, \"/\" =%d, \"%%\" =%d" % mulit_calculation(a,  c))
+
+        else :
+            print("사용자가 입력한 수식은 ::  %d %s %d \n연산자는 +,-,*,/ 중에 하나를 선택 하세요." %(a,b,c))
+       
+        confirm = input("그만 하시려면  \"E"\를 입력 하세요.")
+        if confirm == "E":
+            break
+               
+print ("계산 시작")
+start()
+print ("종료")
+
