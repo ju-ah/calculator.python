@@ -36,10 +36,7 @@ def calculation(a,b,c):
     return intValue, calculationInd
 
 def inputData():
-    a = int(input("숫자를 입하세요. > "))
-    b = input("연산자를 입력 하세요 > ( +, -, *, /) >> ")
-    c = int(input("숫자를 입력하세요. > "))
-    return a,b,c
+ c=input("연산자 입력:")
 
 def start():
     while True:
@@ -56,8 +53,4 @@ def start():
         confirm = input("그만 하려면  \"E"\를 입력.")
         if confirm == "E":
             break
-               
-print ("계산 시작")
-start()
-print ("종료")
-
+              
