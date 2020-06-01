@@ -1,5 +1,7 @@
-# calculator.python
-과제
+# calculator.python 과제
+#오류 뜨는거 고치는 중
+
+
 
 def add(a,c):
     return a + c
